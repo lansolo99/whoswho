@@ -1,0 +1,113 @@
+/*******************************
+            Globals
+*******************************/
+
+// Reset
+
+	header, nav, footer, figure, section, article {display: block;}
+	html, body, span, object, iframe, h1, h2, h3, h4, h5, h6, a, em, font, img, strong, sub, sup, dl, dt, dd, ul, ol, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, p {margin: 0;	padding: 0;	border: 0;	outline: 0; text-decoration: none;}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-ml;
+		font-weight: 600;
+		letter-spacing: normal;
+	}
+
+
+// Border box
+
+body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -o-box-sizing: inherit;
+}
+
+
+// Layout
+
+body {
+	font-family: $font-ml;
+	height: 100%;
+	font-size: 16px;
+	color: $color-anthracite;
+  background-color: $color-grey;
+}
+
+sup{
+	font-size: 0.5em;
+	position: relative;
+	top: -0.7rem;
+}
+
+
+// Utilities
+
+.u-rwdNoWrap{
+	white-space: nowrap;
+}
+
+.u-rwdBreak{
+	display: block;
+
+	@media only screen and (max-width: 455px) {
+		display: none;
+	}
+
+}
+
+.u-rwdBreak-desk-dn{
+	@include responsive(desktop){
+		display: none;
+	}
+
+}
+
+
+// States
+.is-hidden{
+	opacity: 0;
+}
+
+.is-not-displayed{
+	display: none;
+}
+
+.is-not-displayed{
+	display: none;
+}
+
+
+// Semantic ui overrides
+
+.ui.segment{
+  box-shadow: none;
+  border-radius: 0;
+  border:none;
+	font-size: 1em;
+
+	&.vertical{
+		border-bottom: none;
+		padding-top: 0;
+	  padding-bottom: 0;
+	}
+
+}
+
+/* .ui.grid{
+	margin: 0 !important;
+} */
+
+/* ol{
+	margin: 1em;
+}
+
+.ui.grid > .row{
+	padding: 0;
+} */

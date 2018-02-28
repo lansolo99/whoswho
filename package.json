@@ -1,0 +1,50 @@
+{
+  "name": "capifrance_30jours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-bump": "^2.7.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-git": "^2.0.0",
+    "gulp-git-streamed": "^1.8.0",
+    "gulp-gitignore": "^0.1.0",
+    "gulp-iconfont": "^9.0.2",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-remove-html-comments": "^1.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-strip-comments": "^2.5.1",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2",
+    "pump": "^1.0.2",
+    "run-sequence": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 10",
+    "ie",
+    "last 3 iOS versions",
+    "Android",
+    "Safari",
+    "Opera",
+    "iOS 7"
+  ],
+  "dependencies": {
+    "rangeslider.js": "^2.3.1"
+  }
+}

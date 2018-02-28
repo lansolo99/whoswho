@@ -1,0 +1,370 @@
+/*******************************
+          Structure
+*******************************/
+
+/*
+  Structure Table of Contents
+
+* - Header
+* - Main
+*   - Filters
+    - Staff
+* - Identifing
+
+*/
+
+
+
+/*******************************
+            Header
+*******************************/
+
+
+header{
+
+  .ui.container{
+    position: relative;
+    height: 50px;
+  }
+
+  &.top-bar{
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    background-color: $color-green;
+  }
+
+  a.logo{
+    display: block;
+    width: 218px;
+    height: 50px;
+    overflow: hidden;
+
+    @include responsive(mobile){
+      width: 87px;
+    }
+  }
+
+  img{
+
+    &.logo{
+      position: relative;
+      top: 10px;
+      display: block;
+      width: 218px;
+      height: 30px;
+
+      @include responsive(mobile){
+        left: -130px;
+      }
+
+    }
+
+    &.sayoun{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 50px;
+      display: block;
+    }
+
+  }
+
+}
+
+
+
+/*******************************
+            Main
+*******************************/
+
+
+main{
+
+  margin-top: 50px;
+  padding-bottom: 50px;
+
+  h1.title{
+    text-align: center;
+    font-size: 36px;
+  }
+
+
+  // Filters
+
+  .filters{
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+
+    .form-inline{
+
+      span#counter{
+
+        font-size: 22px;
+
+        span.number{
+          color: $color-green;
+        }
+
+      }
+
+      .fieldsets{
+        //margin-top: 30px;
+
+        .fieldset{
+          display: inline-block;
+          margin-top: 30px;
+
+          &__label{
+            display: inline-block;
+            font-family: $font-mr;
+            margin-right: 10px;
+            font-size: 15px;
+          }
+
+          &__radios, &__checkboxes{
+            display: inline-block;
+          }
+
+          &__checkboxes{
+            position: relative;
+            top: 3px;
+          }
+
+          &:not(:last-child){
+            margin-right: 20px;
+
+            @include responsive(mobile){
+              margin-right: 0;
+              display: block;
+            }
+          }
+
+          .ui.checkbox{
+            display: inline-block;
+            margin-right: 13px;
+
+            img{
+              width: 27px;
+              height: auto;
+              position: relative;
+              //top: -3px;
+            }
+          }
+
+        }
+
+      }
+
+      // Semantic override
+
+      .ui.form .inline.fields{
+
+        margin-bottom: 0;
+
+        .field{
+          padding-right: 0px;
+      }
+
+      }
+
+    }
+
+  }
+
+    // Staff
+
+    .staff{
+
+      margin-top: 1rem !important;
+
+      .member{
+        color: white;
+        background-color: $color-green;
+        padding: 30px;
+
+        &_top_wrapper{
+
+          @media only screen and (min-width: 768px) and (max-width: 1199px) {
+            height: 44px;
+          }
+
+        }
+
+        &__bu{
+          width: 34px;
+          height: 21px;
+          display: inline-block;
+          vertical-align: middle;
+
+          img{
+            width: 34px;
+            height: 21px;
+          }
+
+          @media only screen and (min-width: 768px) and (max-width: 1199px) {
+            vertical-align: top;
+          }
+
+
+        }
+
+        &__status{
+
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 10px;
+
+          .light{
+            position: relative;
+            top: 2px;
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            display: inline-block;
+          }
+
+          .text{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 13px;
+            color: rgba(white, 0.75);
+
+            @media only screen and(max-width: 350px) {
+              width: 160px;
+            }
+
+            @media only screen and (min-width: 768px) and (max-width: 1199px) {
+              width: 94px;
+              font-size: 11px;
+              vertical-align: top;
+            }
+
+
+          }
+
+          &.on{
+
+            .light{
+                background-color: $color-green-alt;
+            }
+
+          }
+
+          &.off{
+
+            .light{
+                background-color: $color-red;
+            }
+
+          }
+
+          @media only screen and (min-width: 768px) and (max-width: 1199px) {
+            vertical-align: top;
+          }
+
+        }
+
+        &__picture{
+
+          width: 118px;
+          height: 118px;
+          margin: auto;
+          //background-image: url('../images/avatars/av7.jpg');
+          //background-image: url("");
+          background-repeat: no-repeat;
+          background-size: cover;
+          clip-path: circle(59px at center);
+          margin-top: 20px;
+
+          &.nopic{
+            background-image: url('../images/avatars/no_pic.svg');
+            clip-path: none;
+          }
+
+        }
+
+        &__informations{
+          margin-top: 20px;
+
+          h2{
+            font-size: 22px;
+            font-family: $font-mr;
+          }
+
+          .member__details{
+            list-style: none;
+            margin-top: 10px;
+            font-size: 15px;
+
+            li{
+
+              &:not(:last-child){
+                border-bottom: 1px solid rgba(white, 0.3);
+              }
+
+              padding: 10px 0;
+
+              &:last-child{
+                padding-bottom: 0;
+              }
+
+              span.label{
+                color: rgba(white, 0.75);
+              }
+
+              ul.teams{
+                list-style: none;
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 10px;
+
+                li{
+                  border: none;
+                  padding: 0;
+
+                  &:before{
+                    content: url('../images/team_label.svg');
+                    display: inline-block;
+                    position: relative;
+                    top: 4px;
+                    margin-right: 5px;
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+
+            }
+
+          }
+
+
+        }
+
+      &.off{
+        background-color: $color-grey-off;
+      }
+
+      }
+
+    }
+
+
+}
+
+
+
+// Identifing
+.colored_1{background-color : indianred !important;}
+.colored_2{background-color : rosybrown !important;}
+.colored_3{background-color : mediumpurple !important;}
+.colored_4{background-color : aliceblue !important;}
+.colored_5{background-color : gold !important ;}
+.colored_6{background-color : bisque !important;}
+.colored_7{background-color : darkturquoise !important;}
+.colored_8{background-color : darkseagreen !important;}
+.colored_9{background-color : teal !important;}
+.colored_10{background-color: tomato !important;}

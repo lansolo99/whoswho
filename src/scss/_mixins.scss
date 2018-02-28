@@ -1,0 +1,29 @@
+/*******************************
+             Mixins
+*******************************/
+
+//Responsive breakpoints
+
+@mixin responsive($width) {
+  @if $width == mobile {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $width == tablet {
+    @media only screen and (max-width: 991px) { @content; }
+  }
+  @else if $width == desktop {
+    @media only screen and (min-width: 900px) { @content; }
+  }
+
+
+/*   @else if $width == small-monitor {
+  @media only screen and (max-width: 1199px) { @content; }
+}
+@else if $width == large-monitor {
+  @media only screen and (min-width: 1200px) { @content; }
+}
+@else if $width == widescreen {
+  @media only screen and (min-width: 1920px) { @content; }
+} */
+}
+//
